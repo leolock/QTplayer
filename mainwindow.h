@@ -1,7 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "mybutton.h"
 #include <QMainWindow>
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
@@ -37,24 +36,17 @@ public:
 
 private slots:
 //    void play();
-    void startSlot();
-    void pauseSlot();
-    void addFileSlot();
-    void deleteFileSlot();
+    void startorpauseSlot();
     void setPosition(int position);
     void on_horizontalSlider_sliderMoved(int position);
 
 private:
     Ui::MainWindow *ui;
-
-    QWidget*        buttonWidget;
-    QMediaPlayer*   mediaPlayer;
-    QVideoWidget*   videoWidget;
+    QWidget* buttonWidget;
+    QMediaPlayer* mediaPlayer;
+    QVideoWidget* videoWidget;
     QMediaPlaylist* mediaPlayList;
-    PlayButton*     playButton;
-    PauseButton*    pauseButton;
-    LastButton*     lastButton;
-    NextButton*     nextButton;
+
     void Init();
 
 //private slots:

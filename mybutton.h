@@ -10,81 +10,9 @@ class MyButton : public QPushButton
 
 public:
     MyButton(QWidget *);
+
 protected:
     virtual void enterEvent(QEvent *);
     virtual void leaveEvent(QEvent *);
-
-};
-
-class PlayButton : public QPushButton
-{
-    Q_OBJECT
-
-public:
-    PlayButton(QWidget *);
-protected:
-    virtual void enterEvent(QEvent *);
-    virtual void leaveEvent(QEvent *);
-
-};
-
-class PauseButton : public QPushButton
-{
-    Q_OBJECT
-
-public:
-    PauseButton(QWidget *);
-protected:
-    virtual void enterEvent(QEvent *);
-    virtual void leaveEvent(QEvent *);
-
-};
-
-class ForwardButton : public QPushButton
-{
-    Q_OBJECT
-
-public:
-    ForwardButton(QWidget *);
-protected:
-    virtual void enterEvent(QEvent *);
-    virtual void leaveEvent(QEvent *);
-
-};
-
-class BackButton : public QPushButton
-{
-    Q_OBJECT
-
-public:
-    BackButton(QWidget *);
-protected:
-    virtual void enterEvent(QEvent *);
-    virtual void leaveEvent(QEvent *);
-
-};
-
-class NextButton : public QPushButton
-{
-    Q_OBJECT
-
-public:
-    NextButton(QWidget *);
-protected:
-    virtual void enterEvent(QEvent *);
-    virtual void leaveEvent(QEvent *);
-
-};
-
-class LastButton : public QPushButton
-{
-    Q_OBJECT
-
-public:
-    LastButton(QWidget *);
-protected:
-    virtual void enterEvent(QEvent *);
-    virtual void leaveEvent(QEvent *);
-
 };
 #endif // MYBUTTON_H

@@ -19,13 +19,7 @@
         <file>images/settings.png</file>
         <file>images/volume--mute.png</file>
         <file>images/volume--up.png</file>
-        <file>images/last_1.png</file>
-        <file>images/last_2.png</file>
-        <file>images/next_1.png</file>
-        <file>images/next_2.png</file>
-        <file>images/play_1.png</file>
         <file>images/play_2.png</file>
-        <file>images/pause_1.png</file>
-        <file>images/pause_2.png</file>
+        <file>images/play_1.png</file>
     </qresource>
 </RCC>
