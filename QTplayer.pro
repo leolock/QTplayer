@@ -9,6 +9,7 @@ TEMPLATE = app
 QT += multimedia
 QT += multimediawidgets
 QT += network
+QT += sql
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
@@ -40,6 +41,3 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     resource.qrc
-
-DISTFILES += \
-    images/play_2.png

@@ -1,25 +1,35 @@
 <RCC>
     <qresource prefix="/">
-        <file>images/start.png</file>
         <file>images/back.png</file>
         <file>images/fast.png</file>
+        <file>images/fit-to-screen.png</file>
         <file>images/kuaifang.png</file>
         <file>images/last.png</file>
+        <file>images/last_1.png</file>
+        <file>images/last_2.png</file>
         <file>images/manfang.png</file>
+        <file>images/mute.png</file>
         <file>images/next.png</file>
+        <file>images/next_1.png</file>
+        <file>images/next_2.png</file>
         <file>images/novoice.png</file>
-        <file>images/stop.png</file>
-        <file>images/tingzhi.png</file>
-        <file>images/voice.png</file>
-        <file>images/fit-to-screen.png</file>
         <file>images/pause--outline--filled.png</file>
+        <file>images/pause_1.png</file>
+        <file>images/pause_2.png</file>
         <file>images/play--filled.png</file>
+        <file>images/play_1.png</file>
+        <file>images/play_2.png</file>
         <file>images/settings (1).png</file>
         <file>images/settings--adjust.png</file>
         <file>images/settings.png</file>
+        <file>images/sound.png</file>
+        <file>images/start.png</file>
+        <file>images/stop.png</file>
+        <file>images/stop_1.png</file>
+        <file>images/stop_2.png</file>
+        <file>images/tingzhi.png</file>
+        <file>images/voice.png</file>
         <file>images/volume--mute.png</file>
         <file>images/volume--up.png</file>
-        <file>images/play_2.png</file>
-        <file>images/play_1.png</file>
     </qresource>
 </RCC>

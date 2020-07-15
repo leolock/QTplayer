@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>935</width>
-    <height>720</height>
+    <width>969</width>
+    <height>680</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,42 +25,99 @@
       </property>
      </widget>
     </item>
-    <item row="15" column="1">
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
-      <item>
-       <widget class="QPushButton" name="pushButton">
-        <property name="text">
-         <string>PushButton</string>
+    <item row="17" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="5,1,1,1,5,0">
+      <item alignment="Qt::AlignRight|Qt::AlignVCenter">
+       <widget class="QWidget" name="stopWidget" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QWidget" name="lastWidget" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QWidget" name="playWidget" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QWidget" name="nextWidget" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignRight|Qt::AlignVCenter">
+       <widget class="QWidget" name="soundWidget" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="text">
-         <string>PushButton</string>
+       <widget class="QSlider" name="voiceSlider">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
         </property>
        </widget>
       </item>
      </layout>
     </item>
-    <item row="15" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item row="17" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <widget class="QWidget" name="widget" native="true"/>
+       <widget class="QPushButton" name="addfileButton">
+        <property name="text">
+         <string>打开文件</string>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="startButton">
+       <widget class="QPushButton" name="delfileButton">
         <property name="text">
-         <string/>
+         <string>删除文件</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="clearButton">
+        <property name="text">
+         <string>清空列表</string>
         </property>
        </widget>
       </item>
      </layout>
+    </item>
+    <item row="0" column="0" rowspan="14">
+     <layout class="QHBoxLayout" name="playWidgetLayout"/>
     </item>
     <item row="14" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QSlider" name="horizontalSlider">
+       <widget class="QSlider" name="playPosSlider">
         <property name="enabled">
          <bool>true</bool>
         </property>
@@ -76,16 +133,19 @@
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="playPosLable">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
          <string>播放时间/总时间</string>
         </property>
        </widget>
       </item>
      </layout>
-    </item>
-    <item row="0" column="0" rowspan="14">
-     <layout class="QHBoxLayout" name="playWidgetLayout"/>
     </item>
    </layout>
   </widget>
@@ -94,7 +154,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>935</width>
+     <width>969</width>
      <height>28</height>
     </rect>
    </property>

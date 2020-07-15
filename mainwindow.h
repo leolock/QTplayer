@@ -1,11 +1,15 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "mybutton.h"
 #include <QMainWindow>
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
 #include <QVideoWidget>
 
+#include <QTime>
+#include <QThread>
+#include <QTimer>
 #include <QPixmap>
 #include <QSize>
 #include <QProcess>
@@ -34,30 +38,55 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    QString getNameFromPath(const QString &fileName);
+    QString removeIndexFromAppend( QString name);        //移除append序号
+    void initDatabase(); //从路径中获取文件名
+    void updateToDataBase();
+
 private slots:
-//    void play();
-    void startorpauseSlot();
-    void setPosition(int position);
-    void on_horizontalSlider_sliderMoved(int position);
+    void play();
+//    void startSlot();
+//    void pauseSlot();
+    void playOrPauseSlot();
+    void soundOrMuteSlot();
+    void stopSlot();
+    void nextSlot();
+    void lastSlot();
+    void addFileSlot();
+    void deleteFileSlot();
+
+    void on_playPosSlider_sliderPressed();
+
+    void on_playPosSlider_sliderReleased();
+
+    void on_playPosSlider_sliderMoved(int position);
+
+    void on_listWidget_itemDoubleClicked(QListWidgetItem *item);
+
+    void on_voiceSlider_sliderMoved(int position);
+
+    void on_clearButton_clicked();
+
+private:
+    void Init();
+    void updateDisplayPosInfo();
 
 private:
     Ui::MainWindow *ui;
-    QWidget* buttonWidget;
-    QMediaPlayer* mediaPlayer;
-    QVideoWidget* videoWidget;
+
+    QWidget*        buttonWidget;
+    QMediaPlayer*   mediaPlayer;
+    QVideoWidget*   videoWidget;
     QMediaPlaylist* mediaPlayList;
-
-    void Init();
-
-//private slots:
-//    void play();
-//    void mediaStateChanged(QMediaPlayer::State state);
-//    void positionChanged(qint64 position);
-//    void setPosition(int position);
-//    void durationChanged(qint64 duration);
-//    void handleError();
-
-//    void on_toolButton_clicked();
-
+    PlayButton*     playButton;
+    PauseButton*    pauseButton;
+    StopButton*     stopButton;
+    LastButton*     lastButton;
+    NextButton*     nextButton;
+    SoundButton*    soundButton;
+    MuteButton*     muteButton;
+    int playingIndex;           //当前正在播放视频的序号(从0开始)
+    //用来保存文件目录 文件名
+    QVector<QPair<QPair<QString, QString>, QString > > vector;   //name  fileName  nameAppendIndex
 };
 #endif // MAINWINDOW_H
